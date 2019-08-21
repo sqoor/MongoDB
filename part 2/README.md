@@ -4,11 +4,23 @@ Note: Still need to fix the json file
 
 1. Write a MongoDB query to display all the documents in the collection restaurants.
 
+db.getCollection('resturants').find({})
+
+
 2. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for all the documents in the collection restaurant.
+
+db.getCollection('resturants').find({}, {restaurant_id: 1, name: 1, borough:1, cuisine: 1})
+
 
 3. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine, but exclude the field \_id for all the documents in the collection restaurant.
 
+db.getCollection('resturants').find({}, {_id: 0, restaurant_id: 1, name: 1, borough:1, cuisine: 1})
+
+
 4. Write a MongoDB query to display the fields restaurant_id, name, borough and zip code, but exclude the field \_id for all the documents in the collection restaurant.
+
+
+
 
 5. Write a MongoDB query to display all the restaurant which is in the borough Bronx.
 
